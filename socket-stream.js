@@ -57,7 +57,6 @@ function SocketStream(wsUrl) {
 
 
                 node.onaudioprocess = (e) => {
-                    console.log('onaudio');
                     this.send(e.inputBuffer.getChannelData(0))
                 };
 

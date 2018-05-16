@@ -1,5 +1,5 @@
 {
-  "name": "socket-steam",
+  "name": "socket-stream",
   "version": "1.0.0",
   "description": "Socket stream lib",
   "main": "socket-stream.js",
