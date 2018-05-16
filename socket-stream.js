@@ -10,19 +10,6 @@ function convertFloat32ToInt16(buffer) {
 function SocketStream(wsUrl) {
     this.socket = io(wsUrl);
 
-    this.socket.on('google-message', (message) => {
-        console.log(message);
-    })
-    this.socket.on('bluemix-message', (message) => {
-        console.log(message);
-    })
-    this.socket.on('microsoft-message', (message) => {
-        console.log(message);
-    })
-    this.socket.on('amazon-message', (message) => {
-        console.log(message);
-    })
-
     this.isStreaming = false;
     this.deviceRequested = false;
 
@@ -46,7 +33,7 @@ function SocketStream(wsUrl) {
         if (this.isStreaming) this.stream.write(new ss.Buffer(convertFloat32ToInt16(data)));
     }
 
-    this.requestDevice = function (callback) {
+    this.requestDevice = function () {
 
             window.AudioContext = window.AudioContext || window.webkitAudioContext;
             navigator.getUserMedia = ( navigator.getUserMedia ||
@@ -78,11 +65,11 @@ function SocketStream(wsUrl) {
                 node.connect(this.context.destination);
                 this.deviceRequested = true;
 
-                    }, function(e) {
+            }, function(e) {
 
-                        console.log("An error occurred"); //Null if something goes wrong
+                console.log("An error occurred"); //Null if something goes wrong
 
-                    });
+            });
 
     }
 
