@@ -1,0 +1,22 @@
+{
+  "name": "socket-steam",
+  "version": "1.0.0",
+  "description": "Socket stream lib",
+  "main": "socket-stream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incora-dev/socket-stream.git"
+  },
+  "keywords": [
+    "socket.io"
+  ],
+  "author": "Mykahilo Horoshko <horoshko.m@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/incora-dev/socket-stream/issues"
+  },
+  "homepage": "https://github.com/incora-dev/socket-stream#readme"
+}
