@@ -42,9 +42,7 @@ function SocketStream(wsUrl) {
             navigator.msGetUserMedia);
             window.URL = window.URL || window.webkitURL;
 
-            if(!window.hasOwnProperty('audio_context')){
-                window.audio_context = new AudioContext;
-            }
+            window.audio_context = new AudioContext;
 
 
             navigator.getUserMedia({audio: true}, (stream) => {
