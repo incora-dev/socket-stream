@@ -8,7 +8,7 @@ function convertFloat32ToInt16(buffer) {
 }
 
 function SocketStream(wsUrl) {
-    this.socket = io(wsUrl, { reconnect: true, transports: ['websocket', 'polling'] });
+    this.socket = io(wsUrl);
 
     this.isStreaming = false;
     this.deviceRequested = false;
