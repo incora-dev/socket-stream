@@ -7,7 +7,15 @@ function convertFloat32ToInt16(buffer) {
     return buf.buffer;
 }
 
-function SocketStream(wsUrl) {
+function SocketStream(io, ss, wsUrl) {
+    if (typeof io === 'undefined') {
+        console.log('Socket IO is required');
+        return false;
+    }
+    if (typeof ss === 'undefined') {
+        console.log('Socket IO Stream is required');
+        return false;
+    }
     this.socket = io(wsUrl);
 
     this.isStreaming = false;
